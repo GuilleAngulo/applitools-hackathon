@@ -1,0 +1,18 @@
+{
+  "name": "applitools-hackathon",
+  "version": "1.0.0",
+  "description": "Applitools Holiday Shopping Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test:1": "npx cypress run --browser chrome --spec 'cypress/integration/part1.spec.js'",
+    "test:2": "npx cypress run --browser chrome --spec 'cypress/integration/part2.spec.js'",
+    "test:3": "npx cypress run --browser chrome --spec 'cypress/integration/part3.spec.js'",
+    "cypress:open": "cypress open"
+  },
+  "author": "Guillermo Angulo <gangulo@bilon.es>",
+  "license": "ISC",
+  "devDependencies": {
+    "@applitools/eyes-cypress": "latest",
+    "cypress": "latest"
+  }
+}
