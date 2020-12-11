@@ -1,11 +1,5 @@
 const url = "https://demo.applitools.com/tlcHackathonMasterV1.html"
 
-const config = {
-  appName: 'AppliFashion',
-  batchName: 'Holiday Shopping',
-  browser: { width: 1200, height: 800, name: "chrome" },
-}
-
 describe(`Part 1`, () => {
 
     beforeEach(() => {
@@ -18,7 +12,7 @@ describe(`Part 1`, () => {
 
     it('Test 1', function () {
 
-        cy.eyesOpen({ ...config, testName: this.test.title })
+        cy.eyesOpen({ testName: this.test.title })
         
         cy.eyesCheckWindow({
             tag: "main page",
@@ -30,7 +24,7 @@ describe(`Part 1`, () => {
 
     it('Test 2', function () {
 
-        cy.eyesOpen({ ...config, testName: this.test.title })
+        cy.eyesOpen({ testName: this.test.title })
 
         cy.get('#filter_1').find('li').contains('Black').click();
         cy.get('#filterBtn').click();
@@ -47,7 +41,7 @@ describe(`Part 1`, () => {
 
     it(`Test 3`, function () {
 
-      cy.eyesOpen({ ...config, testName: this.test.title })
+      cy.eyesOpen({ testName: this.test.title })
 
       cy.get('h3').contains('Appli Air x Night').click();
       
